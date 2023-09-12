@@ -4,7 +4,7 @@ const switcher = document.querySelector('.switcher');
 const keysSection = document.querySelector('.piano__keys');
 
 const playNote = (note) => {
-    const audio = new Audio(`../notes/${note}.wav`);
+    const audio = new Audio(`notes/${note}.wav`);
     audio.play();
 }
 
@@ -102,6 +102,7 @@ const keyUpMapper = {
 document.addEventListener('keydown', (event) => {
     event.preventDefault();
     keyDownMapper[event.key]()
+   
 });
 
 document.addEventListener('keyup', (event) => {
