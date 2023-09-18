@@ -48,20 +48,20 @@ const handleMouseUp = (key) => {
     // Marca a tecla como não pressionada
     keyStatus[note] = false;
 }
-// Itera sobre todas as teclas e adiciona ouvintes de eventos de clique do mouse
+// Itera sobre todas as teclas e adiciona eventos de clique do mouse
 keys.forEach((key) => {
     const note = key.getAttribute('data-note');// Obtém a nota associada à tecla
     audioMap[note] = new Audio(`notes/${note}.wav`);// Cria e armazena o áudio para a nota
-// Adiciona um ouvinte de evento de clique do mouse para detectar pressionamentos
+// Evento de clique do mouse para detectar pressionamentos
     key.addEventListener('mousedown', () => {
         if (!keyStatus[note]) {
             handleMouseDown(key);
         }
     });
-// Adiciona um ouvinte de evento de soltar o mouse para detectar quando a tecla é solta
+// Evento de soltar o mouse para detectar quando a tecla é solta
     key.addEventListener('mouseup', () => handleMouseUp(key));
 });
-// Ouvinte de evento para a caixa de verificação que controla a ativação/desativação do piano
+// Evento para a caixa de verificação que controla a ativação/desativação do piano
 checkbox.addEventListener('change', (event) => {
     const keysWithLabels = document.querySelectorAll('.key span');
     
@@ -139,7 +139,7 @@ const keyUpMapper = {
     "Backspace": () => handleMouseUp(keys[22]),
     "\\": () => handleMouseUp(keys[23]),
 }
-// Ouvinte de evento para teclas do teclado pressionadas
+// Evento para teclas do teclado pressionadas
 document.addEventListener('keydown', (event) => {
     event.preventDefault();// Impede o comportamento padrão das teclas
     const key = event.key;// Obtém a tecla pressionada
@@ -149,7 +149,7 @@ document.addEventListener('keydown', (event) => {
         keyDownMapper[key]();// Chama a função associada à tecla
     }
 });
-// Ouvinte de evento para teclas do teclado soltas
+// Evento para teclas do teclado soltas
 document.addEventListener('keyup', (event) => {
     const key = event.key; // Obtém a tecla solta
 
