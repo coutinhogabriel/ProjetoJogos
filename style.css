@@ -150,3 +150,61 @@ body {
     border-bottom: none;
     height: 148px;
 }
+
+/* Jogo da velha */
+
+table {
+	width: 550px;
+	height: 350px;
+	border: 1px inset black
+}
+
+table tr {
+	background-color: rgb(255, 255, 255);
+	font: bold 46px Verdana;
+	color: gray;
+}
+
+table tr td {
+	text-align: center;
+	width: 33.33%;
+	border: 2px inset black;
+}
+
+table tr td:hover {
+	cursor: crosshair;
+}
+
+input[type=button] {
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 20px
+}
+
+fieldset {
+	font-size: 20;
+	font-weight: bold;
+	border: 2px solid rgb(255, 255, 255);
+	width: 300px;
+}
+
+.corpo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	height: 150vh;
+	background-image: url(img/Bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+ 
+.layer1{
+	padding: 5%;
+}

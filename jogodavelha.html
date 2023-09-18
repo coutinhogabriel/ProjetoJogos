@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                            <use xlink:href="#bootstrap"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="piano.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#table"></use>
+                                </svg>
+                                Piano
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contador.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#grid"></use>
+                                </svg>
+                                Contador
+                            </a>
+                        </li>
+                        <li>
+                            <a href="jogodavelha.html" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#people-circle"></use>
+                                </svg>
+                                Jogo da velha
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="corpo">
+        <div class="layer1">
+            <fieldset>
+                <legend> Jogadores </legend>
+                <label for="Jogador 1"> Jogador 1: </label>
+                <input type="text" id="jogador1" />
+                <label for="Jogador 1"> Jogador 2: </label>
+                <input type="text" id="jogador2" />
+
+                <input type="button" value="Iniciar" style="margin-top:4px; height:25px; width:150px; font-size:14px"
+                    onclick="initGame();" />
+            </fieldset>
+        </div>
+
+        <div class="layer2">
+            <h3 id="jogadorAtual"> </h3>
+
+            <div id="game">
+                <table cellpadding="0" cellspacing="0">
+                    <tr border="3">
+                        <td onclick=" setOnCeil(this, 0);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 1);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 2);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td onclick=" setOnCeil(this, 3);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 4);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 5);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                    </tr>
+                    <tr>
+                        <td onclick=" setOnCeil(this, 6);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 7);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                        <td onclick=" setOnCeil(this, 8);" onmouseover=" this.style.backgroundColor = 'black'"
+                            onmouseout=" this.style.backgroundColor = 'white'"> &nbsp; </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scriptJV.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</html>
